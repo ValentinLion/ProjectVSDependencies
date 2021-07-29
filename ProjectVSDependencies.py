@@ -55,9 +55,9 @@ def writeDependenciesToCSV(dependencies):
 
             counter = Counter(projectDependencies)
                         
-            for project,occurence in counter.most_common():
-                if occurence > 1:
-                    text = "WARNING " + project + " " + str(occurance) + " times" 
+            for project,count in counter.most_common():
+                if count > 1:
+                    text = "WARNING " + project + " " + str(count) + " times" 
                     spamwriter.writerow([text, ""])
  
             for dependencie in projectDependencies:
